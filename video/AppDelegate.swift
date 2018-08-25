@@ -15,10 +15,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: CGRect(x: 0, y: 0, width: ScreenInfo.Width, height: ScreenInfo.Height))
+        
+        let tabBarController = CLTabBarController()
+        if isLogin() {
+            window?.rootViewController = tabBarController
+        }else{
+            let loginVC = CLLoginController()
+            let nav = UINavigationController(rootViewController: loginVC)
+            window?.rootViewController = nav
+        }
+        
+        setupNetWorkConfig()
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
+    private func isLogin() -> Bool {
+        return !(CLUserManager.sharedManager.user_id?.isEmpty)!
+    }
+    
+    private func setupNetWorkConfig(){
+        HYBNetworking.setTimeout(30)
+//        HYBNetworking.updateBaseUrl("http://video.cleven1.com/api/")
+        HYBNetworking.updateBaseUrl("http://192.168.0.100:5000/api/")
+        
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

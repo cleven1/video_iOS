@@ -1,0 +1,42 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - Alamofire (4.7.2)
+  - MJRefresh (3.1.15.3)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0.4)
+  - Alamofire (~> 4.5)
+  - MJRefresh (~> 3.1.0)
+  - SnapKit (~> 4.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - Alamofire
+    - MJRefresh
+    - SnapKit
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 0b08fb3d6fda4062427fcf3bf90c3824455d461b
+
+COCOAPODS: 1.5.0
