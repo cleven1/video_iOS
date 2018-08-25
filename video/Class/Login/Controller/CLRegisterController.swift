@@ -139,15 +139,11 @@ class CLRegisterController: CLRootViewController {
         
         self.title = "注册用户"
         
-        setupNavBar()
         setupUI()
         addObservers()
     }
 
-    private func setupNavBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back_image").withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(self.clickBackButton))
-    }
-    
+
     private func setupUI(){
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyBoard))
@@ -246,10 +242,6 @@ class CLRegisterController: CLRootViewController {
             make.bottom.equalToSuperview()
             make.height.equalTo(0.5)
         }
-    }
-
-    @objc private func clickBackButton(){
-        navigationController?.popViewController(animated: true)
     }
     
     @objc private func clickAvaratButton(sender:UIButton) {

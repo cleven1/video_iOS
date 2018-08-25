@@ -26,10 +26,12 @@ class CLProfileViewController: CLRootViewController {
         var model = CLProfileModel()
         model.title = "我看过的"
         model.iconName = "More_LotteryRecommend"
+        model.cellType = .look
         dataArray.append(model)
         
         model.title = "我的收藏"
         model.iconName = "more_historyorder"
+        model.cellType = .collect
         dataArray.append(model)
         
         tableView?.reloadData()
@@ -75,6 +77,11 @@ extension CLProfileViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let model = dataArray[indexPath.row]
+        
+        let videoVC = CLProfileVideoController(profileType: model.cellType)
+        
+        navigationController?.pushViewController(videoVC, animated: true)
     }
     
 }

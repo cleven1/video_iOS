@@ -13,5 +13,6 @@ struct CLProfileModel {
     var iconName:String?
     var title:String?
     var subTitle:String?
+    var cellType:ProfileType = .none
 
 }

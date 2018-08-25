@@ -88,6 +88,10 @@
 		A36352D9212FC8BB003D9985 /* CLRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36352D8212FC8BB003D9985 /* CLRegisterController.swift */; };
 		A3DB101E212FE80E000A509E /* CLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DB101D212FE80E000A509E /* CLButton.swift */; };
 		A3DB1020212FEC36000A509E /* IconButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DB101F212FEC36000A509E /* IconButton+Extension.swift */; };
+		A3E70D8D21313CAF00A7C73A /* API+Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E70D8C21313CAF00A7C73A /* API+Look.swift */; };
+		A3E70D8F21315A3D00A7C73A /* API+Collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E70D8E21315A3D00A7C73A /* API+Collect.swift */; };
+		A3E70D9121315B6500A7C73A /* CLProfileVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E70D9021315B6500A7C73A /* CLProfileVideoController.swift */; };
+		A3E70D9721315FFE00A7C73A /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E70D9621315FFE00A7C73A /* UINavigationController+Extension.swift */; };
 		A3EB2EB5212FFC7C00174C62 /* CLUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB2EB4212FFC7C00174C62 /* CLUserModel.swift */; };
 		A3EB2EB9213002BD00174C62 /* CLTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB2EB8213002BD00174C62 /* CLTools.swift */; };
 		A3EB2EBB2130040C00174C62 /* API+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EB2EBA2130040C00174C62 /* API+Register.swift */; };
@@ -226,6 +230,10 @@
 		A36352D8212FC8BB003D9985 /* CLRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLRegisterController.swift; sourceTree = "<group>"; };
 		A3DB101D212FE80E000A509E /* CLButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLButton.swift; sourceTree = "<group>"; };
 		A3DB101F212FEC36000A509E /* IconButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IconButton+Extension.swift"; sourceTree = "<group>"; };
+		A3E70D8C21313CAF00A7C73A /* API+Look.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Look.swift"; sourceTree = "<group>"; };
+		A3E70D8E21315A3D00A7C73A /* API+Collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Collect.swift"; sourceTree = "<group>"; };
+		A3E70D9021315B6500A7C73A /* CLProfileVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLProfileVideoController.swift; sourceTree = "<group>"; };
+		A3E70D9621315FFE00A7C73A /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		A3EB2EB4212FFC7C00174C62 /* CLUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLUserModel.swift; sourceTree = "<group>"; };
 		A3EB2EB8213002BD00174C62 /* CLTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTools.swift; sourceTree = "<group>"; };
 		A3EB2EBA2130040C00174C62 /* API+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Register.swift"; sourceTree = "<group>"; };
@@ -319,6 +327,8 @@
 				A3EB2EBA2130040C00174C62 /* API+Register.swift */,
 				A3EB2EBC213004E400174C62 /* API+VerifyCode.swift */,
 				A3EB2EBE2130100D00174C62 /* API+Login.swift */,
+				A3E70D8C21313CAF00A7C73A /* API+Look.swift */,
+				A3E70D8E21315A3D00A7C73A /* API+Collect.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -574,6 +584,7 @@
 				84EA904B212A6C03004D53AA /* UIImage + Extension.swift */,
 				84EA904C212A6C03004D53AA /* UIImageView+Extension.swift */,
 				84EA904D212A6C03004D53AA /* UILabel+Extension.swift */,
+				A3E70D9621315FFE00A7C73A /* UINavigationController+Extension.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -609,6 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				84EA9058212A6C48004D53AA /* CLProfileViewController.swift */,
+				A3E70D9021315B6500A7C73A /* CLProfileVideoController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -798,6 +810,7 @@
 				84BBF206212BC64600C12901 /* DNSPageStyle.swift in Sources */,
 				843A4E6D212A76C90045E3B4 /* CLVideoViewController.swift in Sources */,
 				A3DB101E212FE80E000A509E /* CLButton.swift in Sources */,
+				A3E70D8D21313CAF00A7C73A /* API+Look.swift in Sources */,
 				A3EB2EBB2130040C00174C62 /* API+Register.swift in Sources */,
 				843A4E7D212A78FF0045E3B4 /* UITableView+MJRefResh.swift in Sources */,
 				84EA9044212A6ACF004D53AA /* CLRootViewController.swift in Sources */,
@@ -832,6 +845,7 @@
 				843A4F46212AE1CD0045E3B4 /* ZFPlayerLogManager.m in Sources */,
 				84EA9052212A6C03004D53AA /* UIImageView+Extension.swift in Sources */,
 				A3EB2EB5212FFC7C00174C62 /* CLUserModel.swift in Sources */,
+				A3E70D8F21315A3D00A7C73A /* API+Collect.swift in Sources */,
 				843A4F4A212AE1CD0045E3B4 /* ZFIJKPlayerManager.m in Sources */,
 				843A4E8E212ACF330045E3B4 /* CLVideoListModel.swift in Sources */,
 				843A4F4B212AE1CD0045E3B4 /* KSMediaPlayerManager.m in Sources */,
@@ -844,11 +858,13 @@
 				84EA904F212A6C03004D53AA /* UIButton+Extension.swift in Sources */,
 				843A4F3B212AE1CD0045E3B4 /* ZFSmallFloatControlView.m in Sources */,
 				843A4E89212A81CE0045E3B4 /* CLVideoCell.swift in Sources */,
+				A3E70D9721315FFE00A7C73A /* UINavigationController+Extension.swift in Sources */,
 				84BBF208212BC64600C12901 /* DNSPageView.swift in Sources */,
 				84BBF209212BC64600C12901 /* DNSPageViewManager.swift in Sources */,
 				843A4E86212A7EE90045E3B4 /* HYBNetworking.m in Sources */,
 				84EA9043212A6ACF004D53AA /* CLTabBarController.swift in Sources */,
 				84BBF204212BC64600C12901 /* DNSPageContentView.swift in Sources */,
+				A3E70D9121315B6500A7C73A /* CLProfileVideoController.swift in Sources */,
 				843A4F44212AE1CD0045E3B4 /* ZFPlayerController.m in Sources */,
 				843A4F40212AE1CD0045E3B4 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				843A4F3C212AE1CD0045E3B4 /* ZFSpeedLoadingView.m in Sources */,

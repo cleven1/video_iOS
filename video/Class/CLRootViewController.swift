@@ -15,6 +15,14 @@ class CLRootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        setupNavBar()
     }
     
+    private func setupNavBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back_image").withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(self.clickBackButton))
+    }
+    
+    @objc public func clickBackButton(){
+        navigationController?.popViewController(animated: true)
+    }
 }

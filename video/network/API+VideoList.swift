@@ -22,12 +22,12 @@ extension HYBNetworking {
             params = ["id":id!,
                       "ispullup":ispullup ? 1 : 0,
                       "category":category,
-                      "limit_count":2
+                      "limit_count":20
             ]
         }else{
             params = ["ispullup":ispullup ? 1 : 0,
                       "category":category,
-                      "limit_count":2
+                      "limit_count":20
             ]
         }
         HYBNetworking.getWithUrl("video/info", refreshCache: false, params: params, success:  { (response) in
