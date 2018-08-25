@@ -35,7 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func isLogin() -> Bool {
-        return !(CLUserManager.sharedManager.user_id?.isEmpty)!
+        CLUserManager.sharedManager.getUserData()
+        return CLUserManager.sharedManager.user_id != nil
     }
     
     private func setupNetWorkConfig(){

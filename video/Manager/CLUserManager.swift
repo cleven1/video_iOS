@@ -9,7 +9,9 @@
 import UIKit
 
 class CLUserManager: NSObject {
-
+    
+    private let saveUserDataKey = "CLUserProfileData"
+    
     static var sharedManager:CLUserManager = CLUserManager()
     
     var user_id:String?
@@ -28,7 +30,7 @@ class CLUserManager: NSObject {
         
         // 保存 登陆数据
         let userD = UserDefaults.standard
-        userD.set(userData, forKey: "CLUserProfileData")
+        userD.set(userData, forKey: saveUserDataKey)
         userD.synchronize()
         
     }
@@ -36,14 +38,14 @@ class CLUserManager: NSObject {
     // 获取用户数据
     public func getUserData(){
         let userD = UserDefaults.standard
-        guard let data = userD.value(forKey: "CLUserProfileData") as? [String:Any] else {return}
+        guard let data = userD.value(forKey: saveUserDataKey) as? [String:Any] else {return}
         createUserData(userData: data)
     }
     
     // 删除用户数据
     public func deleteUserData(){
         let userD = UserDefaults.standard
-        userD.removeObject(forKey: "CLUserProfileData")
+        userD.removeObject(forKey: saveUserDataKey)
         userD.synchronize()
     }
 
