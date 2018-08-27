@@ -9,6 +9,9 @@
 import UIKit
 
 class CLRegisterController: CLRootViewController {
+    
+    // 头像二进制
+    private var avatarImage:UIImage?
 
     private lazy var bgImageView:UIImageView = {
         let bgImageView = UIImageView()
@@ -289,6 +292,22 @@ class CLRegisterController: CLRootViewController {
         
         guard let registerModel = createRegisterData() else {return}
         HUD.showLoadingHudView(message: "正在注册用户...")
+        
+//        if let avatarImage = self.avatarImage {
+//            HYBNetworking.uploadFile(avatarImage: avatarImage, success: { (file_name) in
+//                registerModel.avatar_url = file_name as? String
+//                self.registerUser(registerModel: registerModel)
+//            }, failure: { (error) in
+//                HUD.hideHud()
+//                HUD.showErrorMessage(message: "头像上传失败")
+//            })
+//        }else{
+//        }
+        self.registerUser(registerModel: registerModel)
+    }
+    
+    private func registerUser(registerModel:CLUSerRegisterModel){
+
         HYBNetworking.postRegisterUserData(registerModel: registerModel, success: { (response) in
             HUD.hideHud()
             HUD.showSuccesshTips(message: "注册成功")
@@ -416,3 +435,46 @@ class CLRegisterController: CLRootViewController {
 
 
 }
+
+extension CLRegisterController:UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let type: String = (info[UIImagePickerControllerMediaType] as! String)
+        
+        //当选择类型是图片
+        if type == "public.image" {
+            //修正图片的位置
+            guard let image = (info[UIImagePickerControllerOriginalImage] as? UIImage) else {return}
+            
+            var size:CGSize = .zero
+            size = CGSize(width: ScreenInfo.Width * UIScreen.main.scale, height: (ScreenInfo.Width / 3 * 4) * UIScreen.main.scale)
+            guard let scaledImage = image.resizedImage(with: .scaleAspectFill, bounds: size, interpolationQuality: .high) else {return}
+            let cropFrame = CGRect(x: (scaledImage.size.width - size.width) / 2, y: (scaledImage.size.height - size.height)/2, width: size.width, height: size.height)
+            
+            guard let croppedImage = scaledImage.croppedImage(cropFrame) else{return}
+            
+            
+            // 压缩照片
+            let imageData = CLImageUtil.resetImgSize(sourceImage: croppedImage, maxImageLenght: 100, maxSizeKB: 100)
+            
+            self.avatarButton.setImage(UIImage(data: imageData), for: .normal)
+            
+//            let tempPath = NSTemporaryDirectory()
+//            let avatarPath = tempPath + "avatar.png"
+//            try? imageData.write(to: URL(fileURLWithPath: avatarPath))
+            
+            self.avatarImage = UIImage(data: imageData)
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+

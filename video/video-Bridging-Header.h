@@ -8,4 +8,4 @@
 #import "ZFPlayerController.h"
 #import "ZFAVPlayerManager.h"
 #import "ZFPlayerControlView.h"
-
+#import "UIImage+Resize.h"

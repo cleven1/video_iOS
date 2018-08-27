@@ -80,6 +80,10 @@
 		84EA9053212A6C03004D53AA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA904D212A6C03004D53AA /* UILabel+Extension.swift */; };
 		84EA9059212A6C48004D53AA /* CLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA9058212A6C48004D53AA /* CLProfileViewController.swift */; };
 		84EA905D212A6E37004D53AA /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EA905C212A6E37004D53AA /* MBProgressHUD.framework */; };
+		A30AE2192133E67D00F63F3A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = A30AE2122133E67C00F63F3A /* UIImage+Resize.m */; };
+		A30AE21A2133E67D00F63F3A /* CLImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30AE2152133E67D00F63F3A /* CLImageUtil.swift */; };
+		A30AE21B2133E67D00F63F3A /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = A30AE2162133E67D00F63F3A /* UIImage+Alpha.m */; };
+		A30AE21C2133E67D00F63F3A /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = A30AE2172133E67D00F63F3A /* UIImage+RoundedCorner.m */; };
 		A36352CA212FAB39003D9985 /* CLLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36352C9212FAB39003D9985 /* CLLoginController.swift */; };
 		A36352D4212FB2F9003D9985 /* login_bg01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A36352D0212FB2F9003D9985 /* login_bg01.jpg */; };
 		A36352D5212FB2F9003D9985 /* login_bg03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A36352D1212FB2F9003D9985 /* login_bg03.jpg */; };
@@ -222,6 +226,13 @@
 		84EA905C212A6E37004D53AA /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
 		854C05E9573FAC3C8ACF9EB2 /* Pods-video.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video.debug.xcconfig"; path = "Pods/Target Support Files/Pods-video/Pods-video.debug.xcconfig"; sourceTree = "<group>"; };
 		91CA411458B5F92EA3A90E9B /* Pods-video.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-video.release.xcconfig"; path = "Pods/Target Support Files/Pods-video/Pods-video.release.xcconfig"; sourceTree = "<group>"; };
+		A30AE2122133E67C00F63F3A /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		A30AE2132133E67C00F63F3A /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		A30AE2142133E67C00F63F3A /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		A30AE2152133E67D00F63F3A /* CLImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLImageUtil.swift; sourceTree = "<group>"; };
+		A30AE2162133E67D00F63F3A /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		A30AE2172133E67D00F63F3A /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		A30AE2182133E67D00F63F3A /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		A36352C9212FAB39003D9985 /* CLLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLoginController.swift; sourceTree = "<group>"; };
 		A36352D0212FB2F9003D9985 /* login_bg01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_bg01.jpg; sourceTree = "<group>"; };
 		A36352D1212FB2F9003D9985 /* login_bg03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_bg03.jpg; sourceTree = "<group>"; };
@@ -577,6 +588,13 @@
 		84EA9047212A6C03004D53AA /* common */ = {
 			isa = PBXGroup;
 			children = (
+				A30AE2182133E67D00F63F3A /* UIImage+Alpha.h */,
+				A30AE2162133E67D00F63F3A /* UIImage+Alpha.m */,
+				A30AE2142133E67C00F63F3A /* UIImage+Resize.h */,
+				A30AE2122133E67C00F63F3A /* UIImage+Resize.m */,
+				A30AE2132133E67C00F63F3A /* UIImage+RoundedCorner.h */,
+				A30AE2172133E67D00F63F3A /* UIImage+RoundedCorner.m */,
+				A30AE2152133E67D00F63F3A /* CLImageUtil.swift */,
 				A3DB101F212FEC36000A509E /* IconButton+Extension.swift */,
 				84EA9048212A6C03004D53AA /* NSDate+Extension.swift */,
 				84EA9049212A6C03004D53AA /* UIButton+Extension.swift */,
@@ -799,11 +817,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30AE21A2133E67D00F63F3A /* CLImageUtil.swift in Sources */,
 				A3EB2EB9213002BD00174C62 /* CLTools.swift in Sources */,
 				843A4E8C212AC3930045E3B4 /* API+VideoList.swift in Sources */,
 				84EA9024212A67A8004D53AA /* CLHomeViewController.swift in Sources */,
 				84EA903F212A69B0004D53AA /* HUD.swift in Sources */,
 				843A4E7E212A78FF0045E3B4 /* UITableView+CLEmpty.swift in Sources */,
+				A30AE2192133E67D00F63F3A /* UIImage+Resize.m in Sources */,
 				A3DB1020212FEC36000A509E /* IconButton+Extension.swift in Sources */,
 				843A4F45212AE1CD0045E3B4 /* ZFPlayerGestureControl.m in Sources */,
 				843A4F47212AE1CD0045E3B4 /* ZFPlayerNotification.m in Sources */,
@@ -835,6 +855,7 @@
 				84BBF207212BC64600C12901 /* DNSPageTitleView.swift in Sources */,
 				843A4F3E212AE1CD0045E3B4 /* ZFVolumeBrightnessView.m in Sources */,
 				A3EB2EBD213004E400174C62 /* API+VerifyCode.swift in Sources */,
+				A30AE21B2133E67D00F63F3A /* UIImage+Alpha.m in Sources */,
 				84BBF205212BC64600C12901 /* DNSPageHelper.swift in Sources */,
 				843A4F35212AE1CD0045E3B4 /* ZFLoadingView.m in Sources */,
 				843A4F41212AE1CD0045E3B4 /* ZFFloatView.m in Sources */,
@@ -866,6 +887,7 @@
 				84BBF204212BC64600C12901 /* DNSPageContentView.swift in Sources */,
 				A3E70D9121315B6500A7C73A /* CLProfileVideoController.swift in Sources */,
 				843A4F44212AE1CD0045E3B4 /* ZFPlayerController.m in Sources */,
+				A30AE21C2133E67D00F63F3A /* UIImage+RoundedCorner.m in Sources */,
 				843A4F40212AE1CD0045E3B4 /* UIViewController+ZFPlayerRotation.m in Sources */,
 				843A4F3C212AE1CD0045E3B4 /* ZFSpeedLoadingView.m in Sources */,
 				843A4E7A212A78FF0045E3B4 /* UICollectionView+MJRefresh.swift in Sources */,

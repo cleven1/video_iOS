@@ -728,9 +728,11 @@ static inline NSString *cachePath() {
           break;
         }
       }
-      
+        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
       manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
-      
+      manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
       
       for (NSString *key in sg_httpHeaders.allKeys) {
         if (sg_httpHeaders[key] != nil) {

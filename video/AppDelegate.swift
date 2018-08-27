@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupNetWorkConfig(){
         HYBNetworking.setTimeout(30)
         HYBNetworking.updateBaseUrl("http://video.cleven1.com/api/")
+        HYBNetworking.configCommonHttpHeaders(["Content-Type":"multipart/form-data"])
 //        HYBNetworking.updateBaseUrl("http://192.168.0.100:5000/api/")
         
     }
